@@ -1,0 +1,137 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Intranet grupo PHOENIX WORLD TRADE">
+    <meta name="Author" content="Josmer Hernandez">
+    <meta name="Designer" content="Napoleon Gutierrez">
+    <title>{{title|upper}} | PHOENIX WORLD TRADE INC.</title>
+    <link rel="stylesheet" href="{% static 'base/css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/app.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    {% block assets %}
+    {% endblock %}
+</head>
+<body>
+    <!-- <header id="phx_header">
+        <div class="phx_header_slider slider fullscreen">
+            <ul class="slides">
+                <li>
+                    <img src="{% static 'base/images/parallax/header.jpg' %}">
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-fixed">
+            <nav class="phx_navbar ">
+                <div class="nav-wrapper">
+                    <a href="{% url 'Home' %}" class="brand-logo">
+                        <img class="phx_navbar_logo" src="{% static 'base/images/PHX.png' %}" alt="{{sitename|upper}}"/>
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#who_we_are" onclick="Materialize.showStaggeredList('#who_we_are')">WHO WE ARE?</a>
+                        </li>
+                        <li>
+                            <a href="#brands">RETAIL</a>
+                        </li>
+                        <li>
+                            <a href="#brands">WHOLESALE</a>
+                        </li>
+                        <li>
+                            <a href="#joinus">JOIN US</a>
+                        </li>
+                        <li>
+                            <a href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header> -->
+
+    {% block content %}
+    {% endblock %}
+
+    <!--<footer class="page-footer phx_color">
+         <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Find us:</h5>
+                    <p class="grey-text text-lighten-4">
+                        Panamá Punta Pacífica, Oceania Business Plaza, Torre 1000, Piso 22 <br>Tel: (507)214-6129</p>
+                    <hr>
+                    <p class="grey-text text-lighten-4">
+                        Zona Libre CL Dominador Bazán edificio Cofrisa #9 local 8A <br>Tel: (507)446-2834 / 446-2518</p>
+                    <h5 class="white-text">E-mail us:</h5>
+                    <p class="grey-text text-lighten-4">
+                        <a href="mailto:ventas@phoenixwt.com.pa?Subject=Sale%20From%20Website" target="_top">
+                            ventas@phoenixwt.com.pa
+                        </a>
+                    </p>
+                    <hr>
+                    <p class="grey-text text-lighten-4">
+                        <a href="mailto:info@phoenixwt.com.pa?Subject=Info%20From%20Website" target="_top">
+                            info@phoenixwt.com.pa
+                        </a>
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Important Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="http://intra.phoenixworldtrade.com">
+                                INTRANET
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="http://cloud.phoenixworldtrade.com">
+                                OWNCLOUD
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">
+                                NEWS
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">
+                                Link 4</a>
+                        </li>
+                        <hr>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="">
+                <span>© 2016 Copyright {{sitename|upper}} </span>
+            </div>
+        </div>
+    </footer>-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'base/js/materialize.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.scrollspy').scrollSpy();
+            $('.parallax').parallax({});
+            $('.phx_header_slider').slider({full_width: true,indicators: false});
+            $('.phx_parallax_who_we_are').css({});
+            $('.phx_parallax_our_brands').css({});
+            $('.phx_parallax_join_us').css({});
+            $('.phx_parallax_contact').css({});
+            $('.slider').slider({full_width: true,indicators: false});
+        });
+        var $header = $('#phx_header');
+        $(document).scroll(function() {
+            $header.css({display: $(this).scrollTop() > 700? "block":"flex"});
+        });
+    </script>
+
+</body>
+</html>

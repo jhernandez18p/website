@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<div class="phx_parallax_our_brands parallax-container ">
+
+    <div class="parallax">
+        <img class="" src="{% static 'base/images/parallax/our_brands.jpg' %}">
+    </div>
+    <nav class="phx_navbar_brands phx_color">
+        <ul class="hide-on-med-and-down">
+            <li>
+                <a href="">RETAIL</a>
+            </li>
+            <li>
+                <a href="">WHOLESALE</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="row phx_brands_cards">
+        <div class="col s12 offset-m1 m4  offset-l1 l5">
+            <div class="card-panel phx_color" style="overflow:hidden">
+                {% for retail_brand in retail_brands %}
+                    <div class="col s3 m6 l6 valign-wrapper" style="min-height:40px; margin:0 auto">
+                        <img style="max-width:120px" src="{% static 'base/images/logos/' %}{{retail_brand.logo}}.png" alt="{{retail_brand.name}}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col s12  m4  l5">
+            <div class="card-panel phx_color" style="overflow:hidden">
+                {% for wholesale_brand in wholesale_brands %}
+                    <div class="col s3 m6 l6 valign-wrapper" style="min-height:40px; margin:0 auto">
+                        <img style="max-width:120px" src="{% static 'base/images/logos/' %}{{wholesale_brand.logo}}.png" alt="{{wholesale_brand.name}}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
