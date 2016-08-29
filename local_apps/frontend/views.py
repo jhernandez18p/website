@@ -17,7 +17,6 @@ def index(request):
     }
     return render(request, 'frontend/index.html', context)
 
-@login_required
 def home(request):
     now = datetime.datetime.now()
     # html = "<html><body>It is now %s.</body></html>" % now
