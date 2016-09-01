@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^phx/$', front_views.phx, name='PHX'),
     url(r'^quienes-somos/$', front_views.index, name='Who-We-Are'),
     url(r'^marcas/$', front_views.index, name='Brands'),
-    url(r'^contact-mal/$', front_views.index, name='Contact-mail'),
+    url(r'^contacto/$', front_views.contact, name='Contact-mail'),
     url(r'^admin/', admin.site.urls),
 ]

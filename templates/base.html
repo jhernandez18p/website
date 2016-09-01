@@ -55,7 +55,7 @@
                     <p><span class="glyphicon glyphicon-phone"></span> +507 2146129</p>
                     <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@phoenixwt.com.pa">info@phoenixwt.com.pa</a></p>
                 </div>
-                <form action="{% url 'Contact-mail' %}">
+                <form action="{% url 'Contact-mail' %}" method="post">
                     {% csrf_token %}
                     <div class="col-sm-7">
                         <div class="row">
