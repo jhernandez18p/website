@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="Site Name" content="phoenixworldtrade.com">
+    <meta name="Type" content="website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="Title" content="{{title}}">
+    <meta name="Keywords" content="Retail, Retailers, Por menor, Por mayor, Holesale, sale, company,Retail,Retailers,Operators,Group(s),Companies,Franchise,Franchising,Franchisors,Partnership,Brands,aldo,timberlan,balu,Food and Beverage,Curacao,PR,Accessories,Home Furnishings,Entertainment,Multimedia,Beauty,Venezuela,Panama,Ecuador,USA,Brasil,Brazil,Saint Marteen,RD,Republica Dominicana,Dominican Republic, Venezuelan,Puerto Rico">
+    <meta name="Description" content="Phoenix World Trade Inc., es un grupo líderde de compañías que operan en Larino América, con un portafolio diversificado.">
+    <meta name="Author" content="Josmer Hernandez">
+    <meta name="Designer" content="Napoleon Gutierrez">
+    <link rel="stylesheet" href="{% static 'base/images/favicon.ico' %}" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/app.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    {% block css %}
+    {% endblock %}
+    <title>{{title|upper}} | PHOENIX WORLD TRADE INC.</title>
+</head>
+<body>
+
+<div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <img class="text-center" src="{% static 'base/images/uc.png' %}">
+                <span class="card-title"></span>
+
+                <h5>Bienvenidos al website de Phoenix World Trade!</h5>
+                <p>Sitio en construcción, por favor vuelva luego.</p>
+            </div>
+
+            <div class="modal-body">
+                <p>
+                    Para obtener más información, escribir a:
+                    <br/>
+                    <a href="mailto:info@phoenixwt.com.pa">info@phoenixwt.com.pa</a>
+                    <br/>
+                    <a href="mailto:ventas@phoenixwt.com.pa?Subject=Sale%20From%20Website" target="_top">ventas@phoenixwt.com.pa</a>
+                    <br/>
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <p><em>Gracias por visitarnos.</em></p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'base/js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'base/js/app.js' %}"></script>
+{% block js %}
+{% endblock %}
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+</script>
+</body>
+</html>

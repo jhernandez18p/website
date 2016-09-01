@@ -1,0 +1,230 @@
+/*-------------------------*/
+/* PHX Mapa                */
+/*-------------------------*/
+
+.phx-mapa{
+    height: 700px;
+}
+
+/*-------------------------*/
+/* PHX Header Nav Bar      */
+/*-------------------------*/
+.navbar{
+    background-color: rgba(14, 14, 14, 0.33);
+    margin-bottom: 0;
+    z-index: 9999;
+    border: 0;
+    font-size: 1.13em !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    height: 90px;
+}
+.navbar-brand>img {
+    height: 70px;
+    width: auto;
+    margin-top: -5px;
+}
+
+.navbar ul{
+    margin-top: 20px;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: transparent; !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 12px;
+    margin-right: 34px;
+    margin-bottom: 8px;
+    background-color: rgba(158, 158, 158, 0.25);
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+@media (max-width: 990px) {
+    .navbar{
+        font-size: .93em !important;
+        height: 60px;
+    }
+    .navbar-brand>img {
+        height: 40px;
+        width: auto;
+        margin-top: -5px;
+    }
+    .navbar ul{
+        margin-top: 10px;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar{
+        height: 60px;
+    }
+    .navbar ul{
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 5px;
+        border-right: 120px solid rgba(255,255,255,.12);
+    }
+    .navbar-collapse {
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
+    }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border-color: rgba(255, 255, 255, 0);
+    }
+    .navbar-brand>img {
+        height: 40px;
+        width: auto;
+        margin-top: -5px;
+    }
+}
+
+/*-------------------------*/
+/* PHX Carousel Full       */
+/*-------------------------*/
+
+
+.carousel{
+}
+.carousel,.item,.active{
+    height:100%;
+}
+
+.carousel-inner{
+    height:100%;
+    /*background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;*/
+}
+
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    /*min-height: 100vh;*/
+    max-height: 100vh;
+    width: 100%
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+.phx-carousel-div {
+}
+
+.carousel-inner .item img {
+
+}
+
+.phx-carousel-full {
+}
+@media (max-width: 768px) {
+    .carousel-inner img {
+        -webkit-filter: grayscale(90%);
+        filter: grayscale(90%); /* make all photos black and white */
+        width: auto;
+        margin: 0;
+    }
+    .carousel-caption, .carousel-indicators{
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+/*-------------------------*/
+/* Container quienes somos */
+/*-------------------------*/
+
+.phx-quienes-somos {
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Segmentos del negocio */
+.phx-segmentos-negocio{
+    background-color: rgba(229, 230, 230, 0.31);
+
+}
+
+/* Footer */
+
+.phx-footer{
+    background-color: #2d2d30;
+    color: #FFF;
+}
+
+/* Ayudas */
+.phx-section-padding{
+    padding: 80px 0;
+}
+.phx-section-padding-footer{
+    padding: 80px 0 0 0;
+}
+.phx-section-padding>ul>li{
+
+}
+
+/*Modal content*/
+.modal-content{
+    border-radius: 0px;
+}
+
+.modal-content img{
+    margin: 0 auto;
+    left: 300px;
+    top: 0;
+    position: absolute;
+}
+.modal-header{
+    margin-top: 200px;
+}
+
+@media (max-width: 990px) {
+    .modal-content img{
+        margin: 0 auto;
+        left: 150px;
+        top: 0;
+        position: absolute;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content img{
+        margin: 0 auto;
+        top: 0;
+        left: 0px;
+        position: absolute;
+        width: 100%;
+    }
+}

@@ -15,6 +15,13 @@ def index(request):
     context = {
         'title': 'Home'
     }
+    return render(request, 'frontend/building-it.html', context)
+
+def phx(request):
+
+    context = {
+        'title': 'Home'
+    }
     return render(request, 'frontend/index.html', context)
 
 def home(request):

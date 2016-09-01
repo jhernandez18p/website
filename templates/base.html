@@ -1,137 +1,116 @@
-{% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+{% load staticfiles %}
 <head>
     <meta charset="UTF-8">
+    <meta name="Site Name" content="phoenixworldtrade.com">
+    <meta name="Type" content="website">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="Intranet grupo PHOENIX WORLD TRADE">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="Title" content="{{title}}">
+    <meta name="Keywords" content="Retail, Retailers, Por menor, Por mayor, Holesale, sale, company,Retail,Retailers,Operators,Group(s),Companies,Franchise,Franchising,Franchisors,Partnership,Brands,aldo,timberlan,balu,Food and Beverage,Curacao,PR,Accessories,Home Furnishings,Entertainment,Multimedia,Beauty,Venezuela,Panama,Ecuador,USA,Brasil,Brazil,Saint Marteen,RD,Republica Dominicana,Dominican Republic, Venezuelan,Puerto Rico">
+    <meta name="Description" content="Phoenix World Trade Inc., es un grupo líderde de compañías que operan en Larino América, con un portafolio diversificado.">
     <meta name="Author" content="Josmer Hernandez">
     <meta name="Designer" content="Napoleon Gutierrez">
-    <title>{{title|upper}} | PHOENIX WORLD TRADE INC.</title>
-    <link rel="stylesheet" href="{% static 'base/css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static 'base/images/favicon.ico' %}" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/app.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
-    {% block assets %}
+    {% block css %}
     {% endblock %}
+    <title>{{title|upper}} | PHOENIX WORLD TRADE INC.</title>
 </head>
 <body>
-    <!-- <header id="phx_header">
-        <div class="phx_header_slider slider fullscreen">
-            <ul class="slides">
-                <li>
-                    <img src="{% static 'base/images/parallax/header.jpg' %}">
-                </li>
-            </ul>
-        </div>
-        <div class="navbar-fixed">
-            <nav class="phx_navbar ">
-                <div class="nav-wrapper">
-                    <a href="{% url 'Home' %}" class="brand-logo">
-                        <img class="phx_navbar_logo" src="{% static 'base/images/PHX.png' %}" alt="{{sitename|upper}}"/>
-                    </a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li>
-                            <a href="#who_we_are" onclick="Materialize.showStaggeredList('#who_we_are')">WHO WE ARE?</a>
-                        </li>
-                        <li>
-                            <a href="#brands">RETAIL</a>
-                        </li>
-                        <li>
-                            <a href="#brands">WHOLESALE</a>
-                        </li>
-                        <li>
-                            <a href="#joinus">JOIN US</a>
-                        </li>
-                        <li>
-                            <a href="#contact">CONTACT</a>
-                        </li>
+    <header class="phx-header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="{% static 'base/images/phx.png' %}" alt="Dispute Bills"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'Who-We-Are' %}">EL GRUPO</a></li>
+                        <li><a href="{% url 'Brands' %}">MARCAS</a></li>
+                        <li><a href="#Contact">CONTACTO</a></li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-    </header> -->
+            </div>
+        </nav>
+    </header>
 
-    {% block content %}
-    {% endblock %}
+    <section class="phx-section">{% block content %}{% endblock %}</section>
 
-    <!--<footer class="page-footer phx_color">
-         <div class="container">
+    <div class="phx-contato phx-section-padding">
+        <div class="container">
+            <h3 class="text-center">CONTACTO</h3>
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Find us:</h5>
-                    <p class="grey-text text-lighten-4">
-                        Panamá Punta Pacífica, Oceania Business Plaza, Torre 1000, Piso 22 <br>Tel: (507)214-6129</p>
-                    <hr>
-                    <p class="grey-text text-lighten-4">
-                        Zona Libre CL Dominador Bazán edificio Cofrisa #9 local 8A <br>Tel: (507)446-2834 / 446-2518</p>
-                    <h5 class="white-text">E-mail us:</h5>
-                    <p class="grey-text text-lighten-4">
-                        <a href="mailto:ventas@phoenixwt.com.pa?Subject=Sale%20From%20Website" target="_top">
-                            ventas@phoenixwt.com.pa
-                        </a>
-                    </p>
-                    <hr>
-                    <p class="grey-text text-lighten-4">
-                        <a href="mailto:info@phoenixwt.com.pa?Subject=Info%20From%20Website" target="_top">
-                            info@phoenixwt.com.pa
-                        </a>
-                    </p>
+                <div class="col-sm-5">
+                    <p>Contantanos.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Panama, PA</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +507 2146129</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@phoenixwt.com.pa">info@phoenixwt.com.pa</a></p>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Important Links</h5>
+                <form action="{% url 'Contact-mail' %}">
+                    {% csrf_token %}
+                    <div class="col-sm-7">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                            </div>
+                        </div>
+                        <textarea class="form-control" id="comments" name="comments" placeholder="Comentarios" rows="5"></textarea><br>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button class="btn btn-default pull-right" type="submit">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="phx-footer phx-section-padding-footer">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Enlaces importantes</h4>
                     <ul>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="http://intra.phoenixworldtrade.com">
-                                INTRANET
-                            </a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="http://cloud.phoenixworldtrade.com">
-                                OWNCLOUD
-                            </a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="#!">
-                                NEWS
-                            </a>
-                        </li>
-                        <hr>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="#!">
-                                Link 4</a>
-                        </li>
-                        <hr>
+                        <li><a href="{% url 'Who-We-Are' %}">¿Quienes somos?</a></li>
+                        <li><a href="{% url 'Brands' %}">Nuestras marcas</a></li>
                     </ul>
                 </div>
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <h4>Nuestras redes</h4>
+                    <p>Facebook</p>
+                    <p>LinkedIn</p>
+                    <p>Youtube</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-offset-3 col-sm-6 col-xs-12">
+                    <p>&copy; Copyright 2016 Phoenix World Trade Inc.</p>
+                </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            <div class="">
-                <span>© 2016 Copyright {{sitename|upper}} </span>
-            </div>
-        </div>
-    </footer>-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="{% static 'base/js/materialize.min.js' %}"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.scrollspy').scrollSpy();
-            $('.parallax').parallax({});
-            $('.phx_header_slider').slider({full_width: true,indicators: false});
-            $('.phx_parallax_who_we_are').css({});
-            $('.phx_parallax_our_brands').css({});
-            $('.phx_parallax_join_us').css({});
-            $('.phx_parallax_contact').css({});
-            $('.slider').slider({full_width: true,indicators: false});
-        });
-        var $header = $('#phx_header');
-        $(document).scroll(function() {
-            $header.css({display: $(this).scrollTop() > 700? "block":"flex"});
-        });
-    </script>
 
+    </footer>
+    <script type="text/javascript" src="{% static 'base/js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'base/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'base/js/app.js' %}"></script>
+    {% block js %}
+    {% endblock %}
 </body>
 </html>
