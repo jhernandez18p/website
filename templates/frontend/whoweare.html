@@ -1,21 +1,182 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-<div class="phx_parallax_who_we_are parallax-container">
 
-    <div class="parallax">
-        <img class="" src="{% static 'base/images/parallax/who_we_are.jpg' %}">
-    </div>
-    <nav class="phx_navbar_who_we_are phx_color">
-        <ul class="hide-on-med-and-down">
-            <p>WHO WE ARE?</p>
-        </ul>
-    </nav>
-    <div class="row phx_brands_cards">
-        <div class="col s12 offset-m1 m10  offset-l1 l10">
-            <div class="card-panel phx_color" style="overflow:hidden">
-                <p class="white-text">
-                    Phoenix World Trade es un grupo líder de compañías que operan en Larinoamérica con un portafolio diversicado, desde venta al por menor hasta bienes raíces. Con más de 3.800 empleados, la compañía representa más de 40 de las mejores marcas internacionales en retail, más de 20 marcas en wholesale, más de 200 marcas en Travel Retail, apoyados en una sólida infraestructura que supervisa más de 360 tiendas en 14 países, incluyendo Panamá, Venezuela, Colombia, Chile, Perú, Ecuador, Brasil, Costa Rica, República Dominicana, Aruba, St. Maarten, Puerto Rico, Curacao y EEUU. <br>Desde 2011, Phoenix World Trade se embarca a su vez en bienes raíces, desarrollando proyectos immobiliarios tanto comerciales como residenciales.
-                </p>
-            </div>
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mapas/css/cssmap-continents.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'mapas/css/cssmap-themes.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'mapas/css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'mapas/css/timeline.css' %}"/>
+    <!-- <link rel="stylesheet" href="{% static 'mapas/css/jquery-jvectormap-2.0.3.css' %}" media="screen" title="Jmap" charset="utf-8"> -->
+{% endblock %}
+
+{% block content %}
+<div class="phx-who-we-are phx-section-margin-top">
+    <div class="container">
+        <div class="page-header">
+            <h1 id="timeline">Como empezó todo</h1>
         </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        <hr>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
+
+<div class="" style="width: 100%; height: 80vh;background-color:#123">
+    <div class="text-center">
+        <h3 style="color:#fff">Operaciones en la región</h3>
+    </div>
+    <div id="map-continents">
+        <ul class="continents">
+            <li class="c1"><a href="#africa"></a></li>
+            <li class="c2"><a href="#asia"></a></li>
+            <li class="c3"><a href="#australia"></a></li>
+            <li class="c4"><a href="#europe"></a></li>
+            <li class="c5"><a href="#north-america"></a></li>
+            <li class="c6"><a href="#south-america"></a></li>
+        </ul>
+    </div>
+    <div id="demo-markers">
+        <ul class="cssmap-pins">
+            {% for location in locations.paises %}
+            <li class="cssmap-pin" data-cssmap-coords="{{location.lat}},{{location.long}}">
+                <div class="cssmap-tooltip-content">
+                    {{location.name}}:{{location.desc}}
+                </div>
+                <a href="#" class="cssmap-marker"><img src="{% static 'mapas/images/pin.png' %}" width="15" height="20" alt="pin"/></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block js %}
+<!-- jQuery -->
+
+<script type="text/javascript" src="{% static 'mapas/js/jquery.cssmap.min.js' %}"></script>
+<!-- <script src="{% static 'base/js/jquery-jvectormap-2.0.3.min.js' %}" charset="utf-8"></script> -->
+<!-- <script src="{% static 'base/js/mapa.js' %}" charset="utf-8"></script> -->
+<script type="text/javascript">
+$(document).ready(function(){
+
+// CSSMap;
+$("#map-continents").CSSMap({
+  "size": 1450,
+  "mapStyle": "dark",
+  "cities": true,
+  "disableClicks": true,
+  "tooltips": false,
+  "responsive": "auto",
+  'loadingText':'Cargando mapa PHX...',
+  "fitHeight": true,
+  "agentsList": {
+    "enable": true,
+    "agentsListId": "#demo-agents",
+    "agentsListSpeed": 0,
+    "agentsListOnHover": false
+  },
+  "pins": {
+    "enable": true,
+    "pinsId": "#demo-markers",
+    "mapSize": 1450,
+    "markerPosition": "middle",
+    "tooltipPosition": "top",
+    "tooltipOnClick": false,
+    "clickableRegions": true
+  }
+});
+// END OF THE CSSMap;
+
+});
+</script>
+{% endblock %}

@@ -1,4 +1,44 @@
 /*-------------------------*/
+/* Ayudas */
+/*-------------------------*/
+
+.phx-section-margin-top{
+    margin-top: 150px;
+}
+
+.phx-section-padding{
+    padding: 80px 0;
+}
+
+.phx-section-padding-footer{
+    padding: 80px 0 0 0;
+}
+
+.phx-section-padding>ul>li{
+
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+@media (max-width: 990px) {
+    .phx-section-margin-top{
+        margin-top: 100px;
+    }
+}
+
+/*-------------------------*/
 /* PHX Mapa                */
 /*-------------------------*/
 
@@ -101,16 +141,13 @@
 
 .carousel{
 }
+
 .carousel,.item,.active{
     height:100%;
 }
 
 .carousel-inner{
     height:100%;
-    /*background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;*/
 }
 
 .carousel-inner img {
@@ -121,7 +158,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
-    /*min-height: 100vh;*/
     max-height: 100vh;
     width: 100%
 }
@@ -130,15 +166,6 @@
     color: #fff !important;
 }
 
-.phx-carousel-div {
-}
-
-.carousel-inner .item img {
-
-}
-
-.phx-carousel-full {
-}
 @media (max-width: 768px) {
     .carousel-inner img {
         -webkit-filter: grayscale(90%);
@@ -158,44 +185,26 @@
 .phx-quienes-somos {
 }
 
-.btn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
-}
-.btn:hover, .btn:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
-}
-
+/*-------------------------*/
 /* Segmentos del negocio */
+/*-------------------------*/
+
 .phx-segmentos-negocio{
     background-color: rgba(229, 230, 230, 0.31);
-
 }
 
+/*-------------------------*/
 /* Footer */
+/*-------------------------*/
 
 .phx-footer{
     background-color: #2d2d30;
     color: #FFF;
 }
 
-/* Ayudas */
-.phx-section-padding{
-    padding: 80px 0;
-}
-.phx-section-padding-footer{
-    padding: 80px 0 0 0;
-}
-.phx-section-padding>ul>li{
-
-}
-
+/*-------------------------*/
 /*Modal content*/
+/*-------------------------*/
 .modal-content{
     border-radius: 0px;
 }
@@ -227,4 +236,24 @@
         position: absolute;
         width: 100%;
     }
+}
+
+/*-------------------------*/
+/* PHX Brands */
+/*-------------------------*/
+
+.phx-our-brands{
+
+}
+
+.phx-brands-frame{
+    margin-top:20px;
+    padding:80px 30px;
+    border:1px solid #111;
+    overflow:hidden;
+}
+
+.phx-brand-image{
+    background-color:#111;
+    padding:50px 20px;
 }

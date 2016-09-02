@@ -2,13 +2,8 @@
 {% load staticfiles %}
 
 {% block content %}
-<div class="phx-our-brands">
+<div class="phx-our-brands phx-section-margin-top">
     <div class="container">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <div class="row">
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Categorias Retail <span class="caret"></span></button>
@@ -23,10 +18,10 @@
         </div>
         <div class="row ">
             {% for brands in brands.retail %}
-            <div class="phx-brands-frame" style="margin-top:20px;padding:80px 30px;border:1px solid #111; overflow:hidden;">
+            <div class="phx-brands-frame">
                 <div class="col-sm-4">
-                    <div class="phx-brand-image" style="background-color:#111;padding:50px 20px;">
-                        <a href="/marcas/{{brands.name}}/" style="">
+                    <div class="phx-brand-image">
+                        <a href="/marcas/{{brands.name}}/">
                             <img src="{% static 'base/images/logos/' %}{{brands.logo}}.png" alt="{{brands.name}}">
                         </a>
                     </div>
@@ -55,10 +50,10 @@
         </div>
         <div class="row ">
             {% for brands in brands.wholesale %}
-            <div class="phx-brands-frame" style="margin-top:20px;padding:80px 30px;border:1px solid #111; overflow:hidden;">
+            <div class="phx-brands-frame">
                 <div class="col-sm-4">
-                    <div class="phx-brand-image" style="background-color:#111;padding:50px 20px;">
-                        <a href="/marcas/{{brands.name}}/" style="">
+                    <div class="phx-brand-image">
+                        <a href="/marcas/{{brands.name}}/">
                             <img src="{% static 'base/images/logos/' %}{{brands.logo}}.png" alt="{{brands.name}}">
                         </a>
                     </div>

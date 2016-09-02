@@ -63,3 +63,85 @@ def phx(request):
         'title': 'Home'
     }
     return render(request, 'frontend/index.html', context)
+
+
+def who_we_are(request):
+    locations ={"paises":[
+            {
+                "name":"Venezuela",
+                "lat":"440",
+                "long":"465",
+                "desc":"ckjnkjvns"
+            },{
+                "name":"Panamá",
+                "lat":"380",
+                "long":"440",
+                "desc":""
+            },{
+                "name":"Colombia",
+                "lat":"408",
+                "long":"455",
+                "desc":""
+            },{
+                "name":"Chile",
+                "lat":"425",
+                "long":"595",
+                "desc":""
+            },{
+                "name":"Perú",
+                "lat":"395",
+                "long":"505",
+                "desc":""
+            },{
+                "name":"Ecuador",
+                "lat":"385",
+                "long":"475",
+                "desc":""
+            },{
+                "name":"Brasil",
+                "lat":"505",
+                "long":"505",
+                "desc":""
+            },{
+                "name":"Costa Rica",
+                "lat":"370",
+                "long":"435",
+                "desc":""
+            },{
+                "name":"República Dominicana",
+                "lat":"420",
+                "long":"402",
+                "desc":""
+            },{
+                "name":"Aruba",
+                "lat":"428",
+                "long":"427",
+                "desc":""
+            },{
+                "name":"St. Maarten",
+                "lat":"448",
+                "long":"406",
+                "desc":""
+            },{
+                "name":"Puerto Rico",
+                "lat":"436",
+                "long":"406",
+                "desc":""
+            },{
+                "name":"Curacao",
+                "lat":"432",
+                "long":"427",
+                "desc":""
+            },{
+                "name":"EEUU",
+                "lat":"384",
+                "long":"375",
+                "desc":""
+            }
+        ]}
+
+    context = {
+    'title': 'Home',
+    'locations':locations,
+    }
+    return render(request, 'frontend/whoweare.html', context)
