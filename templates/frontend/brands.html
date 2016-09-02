@@ -9,18 +9,52 @@
         <br>
         <br>
         <br>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Categorias Retail <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                {% for brands in brands.retail %}
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="#">{{brands.cat}}</a>
-                </li>
-                {% endfor %}
-            </ul>
+        <div class="row">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Categorias Retail <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    {% for brands in brands.retail %}
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">{{brands.cat}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
         <div class="row ">
             {% for brands in brands.retail %}
+            <div class="phx-brands-frame" style="margin-top:20px;padding:80px 30px;border:1px solid #111; overflow:hidden;">
+                <div class="col-sm-4">
+                    <div class="phx-brand-image" style="background-color:#111;padding:50px 20px;">
+                        <a href="/marcas/{{brands.name}}/" style="">
+                            <img src="{% static 'base/images/logos/' %}{{brands.logo}}.png" alt="{{brands.name}}">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="phx-brand-desc">
+                        <h3>{{brands.name}}</h3>
+                        <p>{{brands.desc}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <div class="row">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Categorias Retail <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    {% for brands in brands.wholesale %}
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">{{brands.cat}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row ">
+            {% for brands in brands.wholesale %}
             <div class="phx-brands-frame" style="margin-top:20px;padding:80px 30px;border:1px solid #111; overflow:hidden;">
                 <div class="col-sm-4">
                     <div class="phx-brand-image" style="background-color:#111;padding:50px 20px;">
