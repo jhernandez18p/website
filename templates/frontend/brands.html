@@ -1,37 +1,44 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-<div class="phx_parallax_our_brands parallax-container ">
 
-    <div class="parallax">
-        <img class="" src="{% static 'base/images/parallax/our_brands.jpg' %}">
-    </div>
-    <nav class="phx_navbar_brands phx_color">
-        <ul class="hide-on-med-and-down">
-            <li>
-                <a href="">RETAIL</a>
-            </li>
-            <li>
-                <a href="">WHOLESALE</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="row phx_brands_cards">
-        <div class="col s12 offset-m1 m4  offset-l1 l5">
-            <div class="card-panel phx_color" style="overflow:hidden">
-                {% for retail_brand in retail_brands %}
-                    <div class="col s3 m6 l6 valign-wrapper" style="min-height:40px; margin:0 auto">
-                        <img style="max-width:120px" src="{% static 'base/images/logos/' %}{{retail_brand.logo}}.png" alt="{{retail_brand.name}}">
-                    </div>
+{% block content %}
+<div class="phx-our-brands">
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Categorias Retail <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                {% for brands in brands.retail %}
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">{{brands.cat}}</a>
+                </li>
                 {% endfor %}
-            </div>
+            </ul>
         </div>
-        <div class="col s12  m4  l5">
-            <div class="card-panel phx_color" style="overflow:hidden">
-                {% for wholesale_brand in wholesale_brands %}
-                    <div class="col s3 m6 l6 valign-wrapper" style="min-height:40px; margin:0 auto">
-                        <img style="max-width:120px" src="{% static 'base/images/logos/' %}{{wholesale_brand.logo}}.png" alt="{{wholesale_brand.name}}">
+        <div class="row ">
+            {% for brands in brands.retail %}
+            <div class="phx-brands-frame" style="margin-top:20px;padding:80px 30px;border:1px solid #111; overflow:hidden;">
+                <div class="col-sm-4">
+                    <div class="phx-brand-image" style="background-color:#111;padding:50px 20px;">
+                        <a href="/marcas/{{brands.name}}/" style="">
+                            <img src="{% static 'base/images/logos/' %}{{brands.logo}}.png" alt="{{brands.name}}">
+                        </a>
                     </div>
-                {% endfor %}
+                </div>
+                <div class="col-sm-6">
+                    <div class="phx-brand-desc">
+                        <h3>{{brands.name}}</h3>
+                        <p>{{brands.desc}}</p>
+                    </div>
+                </div>
             </div>
+            {% endfor %}
         </div>
+
     </div>
 </div>
+{% endblock %}
