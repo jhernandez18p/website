@@ -139,9 +139,42 @@ def who_we_are(request):
                 "desc":""
             }
         ]}
-
+    timeline = {
+        'dates' :[
+            {
+                'id':1,
+                'name':'La Gran Familia',
+                'fecha':'1972',
+                'title':'Caracas',
+                'desc':'La Gran Familia empieza su negocio de retail con su primera tienda en Colombia ubicada en la frontera con Venezuela.',
+                'position':'left',
+            },{
+                'id':2,
+                'name':'La Compañia se Muda',
+                'fecha':'1978',
+                'title':'Margarita',
+                'desc':'La compañíase muda a Margarita, donde las condiciones para importar favorecen el crecimiento de la representación de marcas internacionales.',
+                'position':'timeline-inverted',
+            },{
+                'id':3,
+                'name':'La Gran Familia',
+                'fecha':'19980',
+                'title':'Margarita',
+                'desc':'La Gran Familia adquiere en el territorio la subdistribución de las marcas deportivas NIKE, PUMA, CONVERSE y PONY.',
+                'position':'left',
+            },{
+                'id':4,
+                'name':'Apertura de la primera tienda retail',
+                'fecha':'1990',
+                'title':'Margarita',
+                'desc':'Apertura de la primera tienda retail: PLANETA SPORT. El grupo se convierte en distribuidor autorizado de TIMBERLAND.',
+                'position':'timeline-inverted',
+            }
+        ]
+    }
     context = {
-    'title': 'Home',
-    'locations':locations,
+        'title': 'Home',
+        'locations':locations,
+        'timeline':timeline,
     }
     return render(request, 'frontend/whoweare.html', context)
