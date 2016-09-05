@@ -70,8 +70,8 @@ def who_we_are(request):
             {
                 "name":"Venezuela",
                 "lat":"440",
-                "long":"465",
-                "desc":"ckjnkjvns"
+                "long":"445",
+                "desc":""
             },{
                 "name":"Panamá",
                 "lat":"380",
