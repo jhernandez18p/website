@@ -53,7 +53,7 @@
             {% for location in locations.paises %}
             <li class="cssmap-pin" data-cssmap-coords="{{location.lat}},{{location.long}}">
                 <div class="cssmap-tooltip-content">
-                    {{location.name}}:{{location.desc}}
+                    {{location.name}}
                 </div>
                 <a href="#" class="cssmap-marker"><img src="{% static 'mapas/images/pin.png' %}" width="15" height="20" alt="pin"/></a>
             </li>
