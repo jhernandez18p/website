@@ -32,11 +32,11 @@
     <meta name="Author" content="Josmer Hernandez">
     <meta name="Designer" content="Napoleon Gutierrez">
     <link rel="icon" href="{% static 'favicon/favicon.ico' %}" >
+    {% block css %}
+    {% endblock %}
     <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/app.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
-    {% block css %}
-    {% endblock %}
     <title>{{title|upper}} | PHOENIX WORLD TRADE INC.</title>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
